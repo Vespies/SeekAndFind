@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Code\CameraLook.cs" />
     <Compile Include="Assets\Code\PlayerMovement.cs" />
+    <Compile Include="Assets\Code\Raycast.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/SeekAndFind/SeekAndYouShallFind/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
