@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move.normalized * speed * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
     }
     private void OnTriggerEnter(Collider other)
     {

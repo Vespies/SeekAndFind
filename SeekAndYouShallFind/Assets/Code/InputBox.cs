@@ -30,6 +30,8 @@ public class InputBox : MonoBehaviour
         {
             rCast.TabernacleUnlock();
             padlock.GetComponent<Rigidbody>().isKinematic = false;
+            padlock.GetComponent<SphereCollider>().enabled = false;
+            padlock.GetComponent<AudioSource>().Play();
             door.SetActive(false);
         }
     }

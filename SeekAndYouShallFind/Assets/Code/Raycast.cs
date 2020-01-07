@@ -31,6 +31,8 @@ public class Raycast : MonoBehaviour
     private Chalice cH;
     [SerializeField]
     private GameObject door;
+    [SerializeField]
+    private AudioSource source;
     private int relicCount = 0;
     void Start()
     {
@@ -61,26 +63,32 @@ public class Raycast : MonoBehaviour
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse0) && raycastObject.name == "Rome")
                 {
+                    raycastObject.GetComponent<AudioSource>().Play();
                     cities = cities + 1;
-                    Destroy(raycastObject);
+                    raycastObject.GetComponent<SphereCollider>().enabled = false;
                     Cities();
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse0) && raycastObject.name == "Constantinople")
                 {
+                    raycastObject.GetComponent<AudioSource>().Play();
                     cities = cities + 1;
-                    Destroy(raycastObject);
+                    raycastObject.GetComponent<SphereCollider>().enabled = false;
                     Cities();
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse0) && raycastObject.name == "Moscow")
                 {
+                    raycastObject.GetComponent<AudioSource>().Play();
                     cities = cities + 1;
-                    Destroy(raycastObject);
+                    raycastObject.GetComponent<SphereCollider>().enabled = false;
                     Cities();
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse0) && raycastObject.name == "Relic1" || (Input.GetKeyDown(KeyCode.Mouse0) && raycastObject.name == "Relic2"))
                 {
+                    raycastObject.GetComponent<AudioSource>().Play();
                     relicCount = relicCount + 1;
-                    Destroy(raycastObject);
+                    raycastObject.GetComponent<SphereCollider>().enabled = false;
+                    raycastObject.GetComponent<MeshRenderer>().enabled = false;
+                    raycastObject.GetComponent<Light>().enabled = false;
                     Relic();
                 }
                 if (Input.GetKeyDown(KeyCode.Mouse0) && raycastObject.name == "chalice")
@@ -142,5 +150,6 @@ public class Raycast : MonoBehaviour
     public void Door()
     {
         door.SetActive(false);
+        source.Play();
     }
 }
