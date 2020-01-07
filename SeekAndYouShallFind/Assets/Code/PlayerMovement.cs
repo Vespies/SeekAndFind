@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Transform feet;
     [SerializeField]
     private LayerMask groundMask;
+    [SerializeField]
+    private SceneLoader sL;
     private float groundDistance = 0.4f;
     private float gravity = -10f;
     private Vector3 velocity;
@@ -39,5 +41,14 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move.normalized * speed * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("collision");
+        if (other.name == "Exit")
+        {
+            sL.OpenMenu();
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }

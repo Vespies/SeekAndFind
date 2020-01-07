@@ -64,8 +64,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\CameraLook.cs" />
+    <Compile Include="Assets\Code\Chalice.cs" />
+    <Compile Include="Assets\Code\InputBox.cs" />
     <Compile Include="Assets\Code\PlayerMovement.cs" />
     <Compile Include="Assets\Code\Raycast.cs" />
+    <Compile Include="Assets\Code\SceneLoader.cs" />
+    <Compile Include="Assets\UnoriginalAssets\Book\Scripts\Book.cs" />
+    <Compile Include="Assets\UnoriginalAssets\Book\Scripts\PageTurn.cs" />
+    <Compile Include="Assets\UnoriginalAssets\Book\Scripts\Swipe.cs" />
+    <None Include="Assets\UnoriginalAssets\Chalice\Shaders\chalice.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/SeekAndFind/SeekAndYouShallFind/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
