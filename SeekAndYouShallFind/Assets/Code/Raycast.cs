@@ -123,10 +123,12 @@ public class Raycast : MonoBehaviour
         cL.enabled = false;
         pM.enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
     public void TabernacleUnlock()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         iF.SetActive(false);
         txt.SetActive(false);
         cL.enabled = true;

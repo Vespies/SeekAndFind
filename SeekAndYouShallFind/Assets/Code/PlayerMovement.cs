@@ -50,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         {
             sL.OpenMenu();
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }
